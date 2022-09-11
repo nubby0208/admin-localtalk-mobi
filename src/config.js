@@ -29,7 +29,7 @@ export const googleAnalyticsConfig = process.env.REACT_APP_GA_MEASUREMENT_ID;
 //     : 'https://locals-admin-panel-api-lhxhi.ondigitalocean.app/local-admin-backend-api/api/v1';
 
 // const URL = 'http://ves.qtp.mybluehost.me:4000/api/v1';
-const URL = 'http://localhost:4000/api/v1';
+const URL = 'http://10.10.11.143:4000/api/v1';
 
 // const socketURL =
 //   process.env.NODE_ENV !== 'production'
@@ -37,7 +37,7 @@ const URL = 'http://localhost:4000/api/v1';
 //     : 'wss://locals-admin-panel-api-lhxhi.ondigitalocean.app';
 
 // const socketURL = 'ws://ves.qtp.mybluehost.me:4000';
-const socketURL = 'ws://localhost:4000';
+const socketURL = 'ws://10.10.11.143:4000';
 
 export const serverConfig = {
   baseUrl: URL,
