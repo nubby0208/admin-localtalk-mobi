@@ -24,20 +24,17 @@ export const mapConfig = process.env.REACT_APP_MAP_MAPBOX;
 export const googleAnalyticsConfig = process.env.REACT_APP_GA_MEASUREMENT_ID;
 
 // const URL =
-//   process.env.NODE_ENV !== 'production'
-//     ? 'http://localhost:4000/api/v1'
-//     : 'https://locals-admin-panel-api-lhxhi.ondigitalocean.app/local-admin-backend-api/api/v1';
+// process.env.NODE_ENV !== 'production' ? 'http://localhost:4000/api/v1' : 'http://localtalk.mobi:4000/api/v1';
 
-// const URL = 'http://ves.qtp.mybluehost.me:4000/api/v1';
-const URL = 'http://10.10.11.143:4000/api/v1';
+// const URL = 'http://ves.qtp.mybluehost.me:4848/api/v1';
+const URL = 'https://api.localtalk.mobi/api/v1';
+// const URL = 'http://10.10.11.143:4000/api/v1';
 
-// const socketURL =
-//   process.env.NODE_ENV !== 'production'
-//     ? 'ws://10.10.10.225:4000'
-//     : 'wss://locals-admin-panel-api-lhxhi.ondigitalocean.app';
+// const socketURL = process.env.NODE_ENV !== 'production' ? 'ws://localhost:4000' : 'ws://localtalk.mobi:4000';
 
-// const socketURL = 'ws://ves.qtp.mybluehost.me:4000';
-const socketURL = 'ws://10.10.11.143:4000';
+// const socketURL = 'ws://ves.qtp.mybluehost.me:4848';
+const socketURL = 'wss://api.localtalk.mobi';
+// const socketURL = 'ws://10.10.11.143:4000';
 
 export const serverConfig = {
   baseUrl: URL,

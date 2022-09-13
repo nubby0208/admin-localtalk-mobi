@@ -25,8 +25,10 @@ function initSocket(socket) {
 
 module.exports = (server) => {
 
-    const io = SocketIO({ path: '/bridge', serveClient: false, transports: ['websocket', 'polling'] })
-        .listen(server, { log: true });
+    // const io = SocketIO({ path: '/bridge', serveClient: false, transports: ['websocket', 'polling'] })
+    //     .listen(server, { log: true });
+
+    const io = SocketIO(server);    
 
     io.on('connection', (socket) => { initSocket(socket, (response) => { console.log(response) }) }, server)
 
