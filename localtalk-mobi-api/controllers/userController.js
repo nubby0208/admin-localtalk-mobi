@@ -305,9 +305,10 @@ module.exports = {
         }  catch (e) {
     Sentry.captureException(e);
      res.status(500).json({ error: true, data: "no user found !" });
-  } finally {
-    transaction.finish();
-  }
+  } 
+  // finally {
+  //   transaction.finish();
+  // }
         
     },
     getUserByEmail: async (req, res) => {
