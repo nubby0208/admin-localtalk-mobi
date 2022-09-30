@@ -60,7 +60,12 @@ export default function AnnouncementPostForm() {
     const startIndex = (imageFiles.length > 0 && imageFiles[imageFiles.length - 1].index + 1) || 0;
     for (let i = 0, index = startIndex; i < fileObj[0].length && fileArray.length < 9; i += 1, index += 1) {
       const file = fileObj[0][i];
-      formData.append(`img[${index}]`, file, file.name);
+      // formData.append(`img[${index}]`, file, file.name);
+      let smartStrings = [];
+      smartStrings = file.name.split('.');
+      smartStrings.splice(smartStrings.length - 1, 0, `min`);
+
+      formData.append(`img[${index}]`, file, smartStrings.join('.'));
       fileArray.push({ index, name: file.name, url: URL.createObjectURL(file) });
     }
     console.log(fileArray, formData);
