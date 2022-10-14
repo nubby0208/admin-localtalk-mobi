@@ -89,7 +89,8 @@ export default function UserNewForm({ isEdit, currentUser }) {
   if (!isEdit) {
     NewUserSchema = Yup.object().shape({
       // name: Yup.string().required('Name is required'),
-      email: Yup.string().required('Email is required').email(),
+      email: Yup.string().required('Email is required'),
+      // email: Yup.string().required('Email is required').email(),
       password: Yup.string().required('Password is required'),
       gender: Yup.string().required('Gender is required'),
       role: Yup.string().required('Role is required')
@@ -103,7 +104,8 @@ export default function UserNewForm({ isEdit, currentUser }) {
   } else {
     NewUserSchema = Yup.object().shape({
       // name: Yup.string().required('Name is required'),
-      email: Yup.string().required('Email is required').email(),
+      // email: Yup.string().required('Email is required').email(),
+      email: Yup.string().required('Email is required'),
       password: Yup.string().required('Password is required'),
       gender: Yup.string().required('Gender is required')
       // role: Yup.string().required('Role is required'),
